@@ -50,7 +50,7 @@ V takomto priradzovaní/priradení interpretér vie len to že ```a```a ```b``` 
   - <b>1a. </b> Nastaví ```a->PyObject_HEAD->typecode``` na integer
   - <b>1b. </b> Nastaví ```a->val = 1```
     
-1. Priradenie - <b>1a.</b> vytvorí novú *premennú a.Kedže v jazyku Python je všetko reprezentované ako objekt tak - vytvorí nový objekt ```a``` ktorý zdeklaruje že sa jedná o objekt typu integer. <b>1b.</b> V druhom kroku vykoná referenciu objektu ```a``` na hodnotu 1.
+1. Priradenie - <b>1a.</b> vytvorí novú *premennú a. <i>Pozn.</i> Kedže v jazyku Python je všetko reprezentované ako objekt tak - vytvorí nový objekt ```a``` a nastaví mu typ integer. <b>1b.</b> V druhom kroku vykoná referenciu objektu ```a``` na hodnotu 1.
 <br>
 
 <b>2. Priradenie ```3``` do premennej ```b```</b>
