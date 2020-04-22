@@ -85,6 +85,6 @@ Pole NumPy vo svojej najjednoduhšej podstate je objekt jazyka Python zostavený
 
 ![image](images/array_vs_list.png)
 
-
-
+Zo schémy je jasne vidieť, že ak vykonávate nejakú operáciu, ktorá prechádza údajmi v poradí, numpy rozloženie bude oveľa efektívnejšie ako rozloženie Python, a to tak z hľadiska nákladov na ukladanie dát, ako aj z hľadiska nákladov na prístup.
+Znamená to že pri používaní NumPy sa dáta usporiadajú tesne vedľa seba a referencie na nich budú jednoduhšie, ako v prípade Listu kde jednotlivé referencie môžu mať desiatky "prázdnych" rozostupov a referencie na dané hodnoty nebudú zoradené.
 
