@@ -5,7 +5,7 @@ NumPy reprezentuje jeden zo základných (fundamentálnych) stavebných kameňov
 
 <b>Využíva sa najmä kvôli:</b>
 - N-dimenzionálnym maticiam ktoré vytvára ako objekty
-- sofistikovaných (breadcasting) funkcií
+- sofistikovanýcm (breadcasting) funkciám
 - nástrojom ktoré umožnujú integráciu kódu C/C++ a Fortrain
 - funkciám pre lineárnu algebru, Fourier-ové transformácie a mnoho dalších
 
