@@ -47,16 +47,32 @@ V takomto priradzovaní/priradení interpretér vie len to že ```1```a ```2``` 
 
 ### Priradzovanie v jazyku Python
 <b>1. Priradenie ```1``` k premennej ```a```</b>
-   - <b>1a. </b> Nastaví ```a->PyObject_HEAD->typecode``` na integer
-   - <b>1b. </b> Nastaví ```a->val = 1```
+  - <b>1a. </b> Nastaví ```a->PyObject_HEAD->typecode``` na integer
+  - <b>1b. </b> Nastaví ```a->val = 1```
     
-<small>1. Priradenie - <b>1a.</b> vytvorí novú *premennú a.Kedže v jazyku Python je všetko reprezentované ako objekt tak - vytvorí nový objekt ```a``` ktorý zdeklaruje že sa jedná o objekt typu integer. <b>1b.</b> V druhom kroku vykoná referenciu objektu ```a``` na hodnotu 1.</small>
+1. Priradenie - <b>1a.</b> vytvorí novú *premennú a.Kedže v jazyku Python je všetko reprezentované ako objekt tak - vytvorí nový objekt ```a``` ktorý zdeklaruje že sa jedná o objekt typu integer. <b>1b.</b> V druhom kroku vykoná referenciu objektu ```a``` na hodnotu 1.
+<br>
 
-  <b>2. Priradenie ```3``` do premennej ```b```</b>
+<b>2. Priradenie ```3``` do premennej ```b```</b>
    - <b>2a. </b> Nastaví ```b->PyObject_HEAD->typecode``` na integer
    - <b>2b. </b> Nastaví ```b->val = 3```
 
-<small>Spôsom priradzovania je rovnaký ako v bode 1.</small>
+Spôsob priradzovania je rovnaký ako v bode 1.
+<br>
+
+<b>3. Volanie funkcie ```binary_add(a,b)```</b>
+   - <b>3a. </b> hľadá typecode pre premennú a ```a->PyObject_HEAD```
+   - <b>3b. </b> funkcia identifikuje premennú ```a``` ako objekt typu integer, priradí hodnotu k objektu ```a->val```
+   - <b>3c. </b> hľadá typecode pre premennú b ```b->PyObject_HEAD```
+   - <b>3d. </b> funkcia identifikuje premennú ```b``` ako objekt typu integer, priradí hodnotu k objektu ```b->val```
+   - <b>3e. </b> zavolá funkciu ```binary_add<int, int>(a->val, b->val)```
+   - <b>3f. </b> vysledok tohto zapiše ako result, objekt result je typu integer
+ 
+<b>4. Vytvorenie objektu ```C```</b>
+   - <b>4a. </b> nastavi ```c->PyObject_HEAD->typecode```  na integer
+   - <b>4b. </b> nastavi ```c->val``` ako ```result```
+
+
 
 
 
