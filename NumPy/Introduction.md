@@ -1,20 +1,17 @@
 # Numpy
 
 
-NumPy reprezentuje jeden zo základných (fundamentálnych) stavebných kameňov datascience. Jedná sa o knižnicu jazyka Python ktorá/ rozširuje funkcie klasického listu.
+NumPy reprezentuje jeden zo základných (fundamentálnych) stavebných kameňov datascience. Jedná sa o knižnicu jazyka Python ktorá/ rozširuje funkcie klasického listu a mnoho ďalšieho.
 
-Využíva sa najmä kvôli
+<b>Využíva sa najmä kvôli:</b>
+- N-dimenzionálnym maticiam ktoré vytvára ako objekty
+- sofistikovaných (breadcasting) funkcií
+- nástrojom ktoré umožnujú integráciu kódu C/C++ a Fortrain
+- funkciám pre lineárnu algebru, Fourier-ové transformácie a mnoho dalších
 
-N-dimenzionálnym maticiam ktoré vytvára ako objekty
-sofistikovaných (breadcasting) funkcií
-nástrojom ktoré umožnujú integráciu kódu C/C++ a Fortrain
-funkciám pre lineárnu algebru, Fourier-ové transformácie a mnoho dalších
 
-
-Prečo používať Numpy namiesto vstavaného Listu?
-
-Hlavným dôvodom použitia packpage Numpy je jeho rýchlosť, oproti Listu ktorý je pomalý.
-
+<u>Prečo používať Numpy namiesto vstavaného Listu?</u>
+Hlavným dôvodom použitia balíka Numpy je jeho rýchlosť, naproti Listu ktorý je v porovnani s NumPyu pomalý.
 
 
 
@@ -23,7 +20,7 @@ Dynamický programovací jazyk popisuje triedu vyšších programovacích jazyko
 
 ![image](images/cint_vs_pyint.png)
 
-Pre premennú v C kompilátor pozná typ podľa jeho samotnej definície. Čo sa týka premennej v Pythone, všetko, čo viete v čase spustenia programu, je to, že ide o nejaký druh objektu Python.
+Pre premennú v jazyku C kompilátor pozná typ premennej podľa jej samotnej definície. Čo sa týka premennej v Pythone, všetko, čo viete v čase spustenia programu, je to, že ide o nejaký druh objektu Python.
 
 Takže ak v jazyku C máme nasledovné
 
@@ -32,8 +29,35 @@ int a = 1;
 int b = 3;
 int c = a + b;
 ```
-Kompilátor jazyka C vie už od začiatku že sa premenné <b>a</b> a <b>b</b> sú integer, s touto "znalosťou" alebo teda informáciou kompilátor zavolá funkciu "routine" ktorá pridá týmto dvom premenných  
+Kompilátor jazyka C vie už od začiatku že premenné <b>a</b> a <b>b</b> sú integer, s touto "znalosťou" alebo teda informáciou kompilátor zavolá funkciu "routine" ktorá pridá dva integer do pamäti a následne vráti další integer (c) čo reprezentuje len ďalšiu hodnotu v pamäti. Hrubá schéma takého to pridávania je znázornená nižššie:
 
+### Priradzovanie v jazyku C
+1. Priradenie ```<int> 1 ``` k premennej ```a```
+2. Priradenie ```<int> 2 ``` k premennej ```b```
+3. Volanie funkcie ```binary_add<int, int>(a,b)```
+4. Priradzovanie výsledky do premennej C
+
+Ekvivaletný kód takého to priradzovania by v Pythone vyzeral následovne:
+
+```
+a = 1
+b = 3
+c = a + b
+```
+V takomto priradzovaní/priradení interpretér vie len to že ```1```a ```2``` sú objekty, ale nevie o aký typ objektu sa jedná. Interpretér v takomto prípade musí zistiť ```PyObject_HEAD``` pre každú premennú a nájsť informáciu o tom o akú premennú sa jedná a až potom zavolá sumárnu rutinu pre dva typy (a,b). Nakoniec musí vytvoriť a inicializovať nový objekt ktorý bude obsahovať návratovú hodnotu ```c```. Nižšie popísané priradzovanie v jazyku python popisuje celú sekvenciu / kroky ktoré sme si práve vysvetlili.
+
+### Priradzovanie v jazyku Python
+  1. Priradenie ```1``` k premennej ```a```
+    - <b>1a. </b> Nastaví ```a->PyObject_HEAD->typecode``` na integer
+    - <b>1b. </b> Nastaví ```a->val = 1```
+    
+#####1. Priradenie - <b>1a.</b> vytvorí novú *premennú a.Kedže v jazyku Python je všetko reprezentované ako objekt tak - vytvorí nový objekt ```a``` ktorý zdeklaruje že sa jedná o objekt typu integer. <b>1b.</b> V druhom kroku vykoná referenciu objektu ```a``` na hodnotu 1.
+
+  2. Priradenie ```3``` do premennej ```b```
+    - <b>2a. </b> Nastaví ```b->PyObject_HEAD->typecode``` na integer
+    - <b>2b. </b> Nastaví ```b->val = 3```
+
+#####2. Spôsom priradzovania je rovnaký ako v bode 1.
 
 
 
