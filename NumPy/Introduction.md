@@ -43,7 +43,7 @@ a = 1
 b = 3
 c = a + b
 ```
-V takomto priradzovaní/priradení interpretér vie len to že ```a```a ```b``` sú objekty, ale nevie o aký typ objektu sa jedná. Interpretér v takomto prípade musí zistiť ```PyObject_HEAD``` pre každú premennú a nájsť informáciu o tom o akú premennú sa jedná a až potom zavolá sumárnu rutinu pre dva typy (a,b). Nakoniec musí vytvoriť a inicializovať nový objekt ktorý bude obsahovať návratovú hodnotu ```c```. Nižšie popísané priradzovanie v jazyku python popisuje celú sekvenciu / kroky ktoré sme si práve vysvetlili.
+V takomto priradzovaní/priradení interpretér vie len to že ```a```a ```b``` sú nejaké objekty, ale nevie o aký typ objektu sa jedná. Interpretér v takomto prípade musí zistiť ```PyObject_HEAD``` pre každú premennú a nájsť informáciu o tom o akú premennú sa jedná a až potom zavolá sumárnu funkciu ("routine") pre dva typy (a,b). Nakoniec musí vytvoriť a inicializovať nový objekt ktorý bude obsahovať návratovú hodnotu ```c```. Nižšie popísané priradzovanie v jazyku python popisuje celú sekvenciu / kroky ktoré sme si práve vysvetlili.
 
 ### Priradzovanie v jazyku Python
 <b>1. Priradenie ```1``` k premennej ```a```</b>
