@@ -73,10 +73,9 @@ Spôsob priradzovania je rovnaký ako v bode 1.
    - <b>4b. </b> nastavi ```c->val``` ako ```result```
 <br>
 
-Ako je možné vidieť na proovnaní priradzovania pri jazyku C a priradzovania Python, máme rádovo viac operacií ktoré Interpreter musí vykonať ako pri kompilátore (jazyka C)  
-Dynamicky typovým sa teda myslí to že je potrebné vykonať omnoho viac krokok / operácií. Toto je primárny dôvod prečo je programovací jazyk Python pomalý v porovnaní s jazykom C pre operácie na numerických dátach. 
+Ako je možné vidieť vyšie tak ak porovnáme priradzovanie jazyka C a priradzovanie jazyka Python, interpreter jazyka Python musí vykonať rádovo viac operacií v porovnaní s Kompilátorom jazyka C. Dynamicky typovým sa teda myslí to že je potrebné vykonať omnoho viac krokok / operácií. Toto je primárny dôvod prečo je programovací jazyk Python výrazne pomalší, v tomto kontexte pomalý v porovnaní s jazykom C pre operácie na numerických dátach. 
 
 ## Python je interpretovaný namiesto toho aby bol kompilovaný
-Vyššie sme videli jeden rozdiel medzi interpretovaným a kompilovaným kódom. "Smart" kompilátor sa dokáže pozerať dopredu a optimalizovať pre opakované alebo nepotrebné operície, čo môže viesť k úrýchleniu celého procesu.
+Vyššie sme videli jeden rozdiel medzi interpretovaným a kompilovaným kódom. "Smart" kompilátor sa dokáže pozerať dopredu a optimalizovať pre opakované alebo nepotrebné operácie, čo môže viesť k úrýchleniu celkového procesu.
 
 ## Objektový model Pythonu môže viesť k neefektívnemu prístupu k pamäti
