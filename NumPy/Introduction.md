@@ -81,7 +81,9 @@ Vyššie sme videli jeden rozdiel medzi interpretovaným a kompilovaným kódom.
 ## Objektový model Pythonu môže viesť k neefektívnemu prístupu k pamäti
 Predstavme si teraz že máme veľa takýchto celých čísel (integer) a chceme ich nejako zatriediť, spojiť či manimupovať s nimi neskôr ako s celkom. V Pythone môžeme použiť štandartný objekt ```List```, zatiaľ čo v C by sme pravdepodobne použili nejaký druh matice založenej na bufferoch.
 
-Pole NumPy vo svojej najjednoduhšej podstate je objekt jazyka Python zostavený podobne ako pole v jazyku C. To znamená, že podobne ako v Pythone ho s hodnotou premennej spája jeho referencia / ukazovateľ. Na druhej strane objekt ```List``` má ukazovateľ na súvislú / konkrétnu vyrovnávaciu pamäť ukazovateľov, z ktorých každý ukazuje na objekt Python, ktorý má zase odkazy na svoje údaje (v tomto prípade celé čísla). Toto je schéma modelu, ako by tieto dva NumPy pole a List mohli vyzerať:
+Pole NumPy vo svojej najjednoduhšej podstate je objekt jazyka Python zostavený podobne ako pole v jazyku C. To znamená, že podobne ako v Pythone ho s hodnotou premennej spája jeho referencia / ukazovateľ. Na druhej strane objekt ```List``` má ukazovateľ na súvislú / konkrétnu vyrovnávaciu pamäť ukazovateľov, z ktorých každý ukazuje na objekt Python, ktorý má zase odkazy na svoje údaje (v tomto prípade celé čísla). Nižšie je znázornená schéma modelu, ako by tieto dva NumPy pole a Python List mohli vyzerať:
+
+![image](images/array_vs_list.png)
 
 
 
