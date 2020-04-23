@@ -7,7 +7,7 @@ Pre príklad, máme objekt ktorý je definovaný v trojdimenzionalnom priestore 
 ![image](images/3d_dimension.jpeg)
 
 
-Tento bod vieme zapísať aj pomocou vektora či jeho súradnice vložiť do matice kde súradnice body budú mať jednu os. Táto os obsahuje 3 prvky, takže hovoríme že má dĺžku 3. V príklade uvedenom nižšie má pole 2 osi. Prvá os má dĺžku 2, druhá os má dĺžku 3.
+Tento bod vieme zapísať aj pomocou vektora či jeho súradnice vložiť do matice kde súradnice bodu budú mať jednu os. Táto os obsahuje 3 prvky, takže hovoríme že má dĺžku 3. V príklade uvedenom nižšie má pole 2 osi. Prvá os má dĺžku 2, druhá os má dĺžku 3.
 
 ```
 [[1., 0., 0.],
@@ -21,4 +21,20 @@ Dôležité atribúty objektu ```ndarray```:
  - vypíše počet osí (dimenzií) poľa
 
 <b>ndarray.shape</b>
- - ... 
+ - vypíše osi daného poľa. Táto n-tica zložené z integerov indikuje veľkosť poľa v každej jeho dimenzii (osi). Pre Maticu s <b>n</b> riadkami a <b>m</b> stĺpcami, ```shape``` - tvar bude ```(n,m)```. Dĺžka n-tice ``shape``` bude reprezentovať počet osi, ```ndim```.
+
+<b>ndarray.size</b>
+ - celkové číslo / počet elementov ktoré obsahuje dané pole. 
+
+<b>ndarray.dtype</b>
+ - objekt popisujúci typ elementu v poli. Využíva sa najmä v tedy ak máme dátové jednotky ktoré nezaberajú veľa bajtov v pamäti a chceme exaktne určit rozsah bunky ktorá bude držať dané číslo / premennú.
+
+
+<b>ndarray.itemsize</b>
+ - vráti veľkosť v byte každého elementu v poli. 
+
+<ndarray.data>
+ - reprezentuje buffer ktorý obsahuje aktuálnu premennu poľa. Bežne sa tento atribút nevyužíva pretože pristupujeme k elementu poľa cez jeho index.
+
+
+## príklady sú uvedené v súboroch vyššie.
