@@ -33,7 +33,7 @@ Dôležité atribúty objektu ```ndarray```:
 <b>ndarray.itemsize</b>
  - vráti veľkosť v byte každého elementu v poli. 
 
-<ndarray.data>
+<b>ndarray.data</b>
  - reprezentuje buffer ktorý obsahuje aktuálnu premennu poľa. Bežne sa tento atribút nevyužíva pretože pristupujeme k elementu poľa cez jeho index.
 
 
