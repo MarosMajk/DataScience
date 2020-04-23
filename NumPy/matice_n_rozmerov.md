@@ -7,3 +7,18 @@ Pre príklad, máme objekt ktorý je definovaný v trojdimenzionalnom priestore 
 ![image](images/3d_dimension.jpeg)
 
 
+Tento bod vieme zapísať aj pomocou vektora či jeho súradnice vložiť do matice kde súradnice body budú mať jednu os. Táto os obsahuje 3 prvky, takže hovoríme že má dĺžku 3. V príklade uvedenom nižšie má pole 2 osi. Prvá os má dĺžku 2, druhá os má dĺžku 3.
+
+```
+[[1., 0., 0.],
+ [0., 1., 2.]]
+```
+Objekt pola v NumPy sa nazýva ```ndarray```. Taktiež sa označuje ```array```. Treba poznamenať že pole ```numpy.array``` nieje to isté ako objekt ```array.array``` v štandardnej Python knižnici, ktorá poskytuje len jedno rozmerné (dimenzionálne) pole a ponúka omnoho menej funkcionalít. 
+
+Dôležité atribúty objektu ```ndarray```:
+
+<b>ndarray.ndim</b>
+ - vypíše počet osí (dimenzií) poľa
+
+<b>ndarray.shape</b>
+ - ... 
