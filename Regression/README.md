@@ -1,4 +1,4 @@
-#Lineárna regressia
+# Lineárna regressia
 
 ## Regresná analýza
 Hlavným cieľom regresnej analýzy je preskúmať a charakterizovať vzájomné vzťahy medzi premennými. Jej úlohou je nájsť matematickú funkciu nazývanú aj <b>regresnú funkciu</b> (model). Tento model ma za úlohu čo najlepšie popisovať priebeh závislostí medzi premennými. Podľa počtu neznámych delíme regresnú analýzu na :
