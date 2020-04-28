@@ -1,4 +1,4 @@
-# | Learning
+# | Data Science - Learning
 
 <b>```EN```</b> I created this <u>document</u> to make my study materials and exercises that i collected during my self studying available for everyone, especially for my classmates who needs some study materials, explanations and exercises to understand problematic of Python and AI.
 
